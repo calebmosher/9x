@@ -1,0 +1,172 @@
+* {
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	transition: border 120ms linear, 
+		color 120ms linear, 
+		background 120ms linear;
+}
+
+
+
+#board {
+	margin: 0 auto;
+	width: 608px;
+	height: 608px;
+	border: 4px solid #000;
+}
+
+
+.subBoard {
+	width: 33.3333333333%;
+	height: 33.3333333333%;
+	border: 4px solid #000;
+	float: left;
+}
+.subBoard .boardOutline {
+	width: 100%;
+	height: 100%;
+}
+.subBoard.currentBoard.currentBoardX,
+.subBoard.currentBoard.currentBoardX .boardOutline {
+	border-color: #c00;
+}
+.subBoard.currentBoard.currentBoardO,
+.subBoard.currentBoard.currentBoardO .boardOutline {
+	border-color: #0c0;
+}
+
+
+.subBoardSpace {
+	width: 33.3333333333%;
+	height: 33.3333333333%;
+	float: left;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+	line-height: 66px;
+}
+.currentBoard .subBoardSpace {
+	cursor: pointer;
+}
+
+
+.board0 .boardOutline,
+.board0 .subBoardSpace,
+.board0.currentBoard .subBoardSpace.x:hover,
+.board0.currentBoard .subBoardSpace.o:hover {
+	border: 2px solid #f6f;
+}
+.board1 .boardOutline,
+.board1 .subBoardSpace,
+.board1.currentBoard .subBoardSpace.x:hover,
+.board1.currentBoard .subBoardSpace.o:hover {
+	border: 2px solid #f00;
+}
+.board2 .boardOutline,
+.board2 .subBoardSpace,
+.board2.currentBoard .subBoardSpace.x:hover,
+.board2.currentBoard .subBoardSpace.o:hover {
+	border: 2px solid #f90;
+}
+.board3 .boardOutline,
+.board3 .subBoardSpace,
+.board3.currentBoard .subBoardSpace.x:hover,
+.board3.currentBoard .subBoardSpace.o:hover {
+	border: 2px solid #fc0;
+}
+.board4 .boardOutline,
+.board4 .subBoardSpace,
+.board4.currentBoard .subBoardSpace.x:hover,
+.board4.currentBoard .subBoardSpace.o:hover {
+	border: 2px solid #0f0;
+}
+.board5 .boardOutline,
+.board5 .subBoardSpace,
+.board5.currentBoard .subBoardSpace.x:hover,
+.board5.currentBoard .subBoardSpace.o:hover {
+	border: 2px solid #00f;
+}
+.board6 .boardOutline,
+.board6 .subBoardSpace,
+.board6.currentBoard .subBoardSpace.x:hover,
+.board6.currentBoard .subBoardSpace.o:hover {
+	border: 2px solid #60f;
+}
+.board7 .boardOutline,
+.board7 .subBoardSpace,
+.board7.currentBoard .subBoardSpace.x:hover,
+.board7.currentBoard .subBoardSpace.o:hover {
+	border: 2px solid #999;
+}
+.board8 .boardOutline,
+.board8 .subBoardSpace,
+.board8.currentBoard .subBoardSpace.x:hover,
+.board8.currentBoard .subBoardSpace.o:hover {
+	border: 2px solid #633;
+}
+
+.boardOutline {
+	border-width: 3px !important;
+}
+
+
+.subBoard.currentBoard.turnX,
+.currentBoard .subBoardSpace.turnX:hover,
+.subBoard.wonX .boardOutline,
+.subBoard.wonX .subBoardSpace {
+	border: 4px solid #c00;
+}
+.subBoard.currentBoard.turnO,
+.currentBoard .subBoardSpace.turnO:hover,
+.subBoard.wonO .boardOutline,
+.subBoard.wonO .subBoardSpace {
+	border: 4px solid #0c0;
+}
+
+.subBoard.wonX .subBoardSpace {
+	background: rgba(204, 0, 0, .2);
+}
+.subBoard.wonO .subBoardSpace {
+	background: rgba(0, 204, 0, .2);
+}
+
+.subBoard.wonX .subBoardSpace.o:after,
+.subBoard.wonO .subBoardSpace.x:after {
+	color: #999;
+}
+
+.x,
+.o {
+	cursor: default;
+}
+.x:after {
+	content: "X";
+	color: #c00;
+}
+.o:after {
+	content: "O";
+	color: #0c0;
+}
+
+.reset {
+	position: absolute;
+	top: 50px;
+	right: 100px;
+	width: 100px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+	border: 4px solid;
+	cursor: pointer;
+}
+.reset:after {
+	content: "reset";
+}
+.reset:hover {
+	color: #ffcc00;
+	border-color: #fc0;
+}
